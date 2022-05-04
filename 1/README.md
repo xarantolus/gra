@@ -21,7 +21,7 @@ Dann kann man das Programm ausführen und sich den Exit-Code anzeigen lassen:
 
 Standardmäßig gibt es den Wert des Bytes an `[rsp + 7]` als Exit-Code zurück (was fast immer `0` ist).
 
-Im Code ist auch noch eine Zeile, die den Wert an `[rsp+0]` lädt. Dafür einfach das `//` am Anfang der Zeile entfernen und neu kompilieren.
+Im Code von `env.S` ist auch noch eine Zeile, die den Wert an `[rsp+0]` lädt. Zum aktivieren einfach das `//` am Anfang der Zeile entfernen und neu kompilieren.
 
 Wie im folgenden Bild zu sehen müsste -- wenn genau 4 Argumente übergeben werden -- das Byte an `[rsp+0]` den Wert `5` haben. Wichtig ist, dass man die "Little Endian" Werte anschaut, da die x86-64 Architektur ja diese byte order hat.
 
