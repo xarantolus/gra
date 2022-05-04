@@ -21,14 +21,19 @@ _start:
     # to see how the exit code changes when you load different values from the stack
 
     # To get the byte asked about in the quiz (results in 0):
+
     mov dil, byte ptr [rsp+7]
+
 
     # To get the lowest byte of the number, which is also the
     # Byte that stores the number of arguments
     # (at least if you have less than 256 arguments)
     # This should result in 5 when you pass four arguments
     # (the program path at argv[0] is also counted)
+
     // mov dil, byte ptr [rsp+0]
+
+
 
     # Syscall receives rdi as argument for the exit code,
     # this allows us to print the number using
